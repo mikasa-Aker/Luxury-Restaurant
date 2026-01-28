@@ -1,0 +1,83 @@
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Luxury Gourmet Restaurant - Gallery</title>
+            <link rel="stylesheet" href="/Luxury-Restaurant/CSS/stylesheet.css">
+            </head>
+            <body>
+            <header>
+                <div class="logo">Gourmet Luxe</div>
+                <nav>
+                <ul>
+                    <li><a href="/Luxury-Restaurant/HTML/index.html">Home</a></li>
+                    <li><a href="/Luxury-Restaurant/HTML/menu.html">Menu</a></li>
+                    <li><a href="/Luxury-Restaurant/HTML/gellery.html">Gallery</a></li>
+                    <li><a href="/Luxury-Restaurant/HTML/reservations.html">Reservations</a></li>
+                    <li><a href="/Luxury-Restaurant/HTML/contact.html">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                </nav>
+            </header>
+
+            <section id="gallery" class="section">
+                <h2>Gallery</h2>
+                <div style="margin-bottom: 2rem;">
+                <button class="btn" onclick="filterGallery('all')">All</button>
+                <button class="btn btn-outline" onclick="filterGallery('food')">Food</button>
+                <button class="btn btn-outline" onclick="filterGallery('interior')">Interior</button>
+                <button class="btn btn-outline" onclick="filterGallery('events')">Events</button>
+                </div>
+                <div class="gallery-grid fade-up" id="gallery-container">
+                <div class="gallery-item food">
+                    <img src="https://source.unsplash.com/featured/?dish" alt="Dish">
+                    <div class="overlay"><p>Signature Dish</p></div>
+                </div>
+                <div class="gallery-item interior">
+                    <img src="https://source.unsplash.com/featured/?restaurant-interior" alt="Interior">
+                    <div class="overlay"><p>Elegant Dining Room</p></div>
+                </div>
+                <div class="gallery-item food">
+                    <img src="https://source.unsplash.com/featured/?pasta" alt="Pasta">
+                    <div class="overlay"><p>Handmade Pasta</p></div>
+                </div>
+                <div class="gallery-item events">
+                    <img src="https://source.unsplash.com/featured/?wedding" alt="Event">
+                    <div class="overlay"><p>Private Event</p></div>
+                </div>
+                <div class="gallery-item interior">
+                    <img src="https://source.unsplash.com/featured/?bar" alt="Bar">
+                    <div class="overlay"><p>Cocktail Bar</p></div>
+                </div>
+                <div class="gallery-item food">
+                    <img src="https://source.unsplash.com/featured/?sushi" alt="Sushi">
+                    <div class="overlay"><p>Fresh Sushi</p></div>
+                </div>
+                </div>
+            </section>
+
+            <footer>
+                <p>&copy; 2023 Gourmet Luxe. All rights reserved.</p>
+                <a href="#">Facebook</a> <a href="#">Instagram</a> <a href="#">Twitter</a>
+            </footer>
+
+            <script src="/Luxury-Restaurant/JS/script.js"></script>
+            <script>
+                function filterGallery(category) {
+                const items = document.querySelectorAll('.gallery-item');
+                items.forEach(item => {
+                    if (category === 'all' || item.classList.contains(category)) {
+                    item.style.display = 'block';
+                    } else {
+                    item.style.display = 'none';
+                    }
+                });
+                }
+            </script>
+            </body>
+            </html>
