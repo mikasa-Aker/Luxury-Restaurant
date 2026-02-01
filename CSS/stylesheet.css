@@ -141,6 +141,7 @@
     cursor: pointer;
     transition: var(--transition-smooth);
     box-shadow: var(--box-shadow-button);
+    text-decoration: none;
     }
 
     .btn:hover {
